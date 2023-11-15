@@ -4,8 +4,9 @@
  */
 
 /dts-v1/;
-#include <nordic/nrf52840_qiaa.dtsi>
-#include "custom_plank-pinctrl.dtsi"
+#include <nordic/nrf52833_qdaa.dtsi>
+#include "voltage_sensor-pinctrl.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 / {
 	model = "Voltage Sensor Board";
@@ -52,7 +53,7 @@
 
 &uart0 {
 	compatible = "nordic,nrf-uarte";
-	status = "disable";
+	status = "disabled";
 
 	current-speed = <115200>;
 	pinctrl-0 = <&uart0_default>;
